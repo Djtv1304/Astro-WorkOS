@@ -1,0 +1,46 @@
+---
+import { FaTachometerAlt, FaCar, FaUser, FaCreditCard, FaCog, FaHistory } from 'react-icons/fa';
+---
+
+<aside class="bg-white w-64 min-h-screen shadow-sm border-r border-gray-200">
+    <nav class="p-4">
+        <ul class="space-y-2">
+            <li>
+                <a href="/dashboard" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaTachometerAlt className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/booking" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaCar className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Book Vehicle</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/history" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaHistory className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Rental History</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/payments" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaCreditCard className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Payments</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/profile" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaUser className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/settings" class="flex items-center space-x-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-lg transition-colors group">
+                    <FaCog className="h-5 w-5 group-hover:text-primary-600" />
+                    <span class="font-medium">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>

@@ -1,0 +1,70 @@
+---
+import { FaBolt, FaCar, FaUsers, FaStar } from 'react-icons/fa';
+
+export interface Props {
+    name: string;
+    image: string;
+    price: number;
+    range: number;
+    seats: number;
+    rating: number;
+    features: string[];
+    category: string;
+}
+
+const { name, image, price, range, seats, rating, features, category } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+    <div class="relative overflow-hidden">
+        <img
+                src={image}
+                alt={name}
+                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+        <div class="absolute top-4 left-4">
+      <span class="bg-primary-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+        {category}
+      </span>
+        </div>
+        <div class="absolute top-4 right-4 flex items-center space-x-1 bg-white bg-opacity-90 px-2 py-1 rounded-full">
+            <FaStar className="h-3 w-3 text-yellow-400" />
+            <span class="text-xs font-medium">{rating}</span>
+        </div>
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
+
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center space-x-4 text-sm text-gray-600">
+                <div class="flex items-center space-x-1">
+                    <FaBolt className="h-4 w-4 text-primary-500" />
+                    <span>{range} mi</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <FaUsers className="h-4 w-4 text-gray-400" />
+                    <span>{seats} seats</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="text-2xl font-bold text-gray-900">${price}</div>
+                <div class="text-sm text-gray-500">per day</div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="flex flex-wrap gap-2">
+                {features.slice(0, 3).map(feature => (
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+            {feature}
+          </span>
+                ))}
+            </div>
+        </div>
+
+        <button class="w-full bg-primary-600 text-white py-2 px-4 rounded-lg hover:bg-primary-700 transition-colors font-medium">
+            Book Now
+        </button>
+    </div>
+</div>

@@ -1,0 +1,184 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import { FaBolt, FaLeaf, FaUsers, FaAward, FaGlobe, FaHeart } from 'react-icons/fa';
+---
+
+<PublicLayout title="About Us - EcoRide" description="Learn about EcoRide's mission to revolutionize transportation with sustainable electric vehicle solutions.">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Driving the Future of
+                    <span class="text-primary-600">Sustainable Transportation</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    At EcoRide, we believe that sustainable transportation shouldn't mean compromising on quality,
+                    performance, or convenience. We're here to prove that electric is better.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        We're on a mission to make sustainable transportation accessible to everyone.
+                        By providing premium electric vehicles for rent, we're helping reduce carbon emissions
+                        while offering an exceptional driving experience.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Every mile driven with EcoRide is a step towards a cleaner, healthier planet.
+                        We believe that small actions can create big changes, and together, we can drive
+                        the transformation to a sustainable future.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary-600 mb-2">10,000+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary-600 mb-2">50,000+</div>
+                            <div class="text-gray-600">Miles Driven</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img
+                            src="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Electric vehicle charging"
+                            class="w-full h-auto rounded-2xl shadow-xl"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    These core values guide everything we do and shape our commitment to you and the environment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaLeaf className="h-8 w-8 text-primary-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Sustainability</h3>
+                    <p class="text-gray-600">
+                        We're committed to reducing environmental impact through clean transportation solutions.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaAward className="h-8 w-8 text-secondary-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Excellence</h3>
+                    <p class="text-gray-600">
+                        We maintain the highest standards in vehicle quality, customer service, and user experience.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaUsers className="h-8 w-8 text-accent-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Community</h3>
+                    <p class="text-gray-600">
+                        We build strong relationships with our customers and contribute positively to local communities.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaBolt className="h-8 w-8 text-primary-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
+                    <p class="text-gray-600">
+                        We embrace cutting-edge technology to provide the best electric vehicle experience.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaGlobe className="h-8 w-8 text-secondary-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Accessibility</h3>
+                    <p class="text-gray-600">
+                        We make sustainable transportation accessible and affordable for everyone.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <FaHeart className="h-8 w-8 text-accent-600" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Care</h3>
+                    <p class="text-gray-600">
+                        We care deeply about our customers, our planet, and the future we're building together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team or Story Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img
+                            src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Team working together"
+                            class="w-full h-auto rounded-2xl shadow-xl"
+                    />
+                </div>
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Founded in 2020 by a team of environmental enthusiasts and tech innovators,
+                        EcoRide started with a simple vision: make electric vehicle rental as easy
+                        and accessible as traditional car rentals.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        What began as a small fleet of five electric vehicles has grown into a
+                        comprehensive network serving thousands of customers across multiple cities.
+                        We've proven that sustainable doesn't mean sacrificing quality or convenience.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Today, we continue to expand our fleet, improve our technology, and work
+                        towards our goal of making every urban journey emission-free.
+                    </p>
+                    <a href="/contact" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Join Our Mission
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Be part of the sustainable transportation revolution. Every rental helps build a cleaner future.
+            </p>
+            <a href="/signup" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+</PublicLayout>

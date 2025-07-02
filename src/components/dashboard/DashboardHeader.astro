@@ -1,0 +1,58 @@
+---
+import { FaBolt, FaBell, FaUser, FaSignOutAlt } from 'react-icons/fa';
+---
+
+<header class="bg-white shadow-sm border-b border-gray-200">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/dashboard" class="flex items-center space-x-2 text-primary-600">
+                    <FaBolt className="h-8 w-8" />
+                    <span class="text-2xl font-bold">EcoRide</span>
+                </a>
+            </div>
+
+            <!-- User Menu -->
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-500 hover:text-gray-700 relative">
+                    <FaBell className="h-6 w-6" />
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                </button>
+
+                <div class="relative">
+                    <button id="user-menu-button" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors">
+                        <FaUser className="h-6 w-6" />
+                        <span class="hidden sm:block">John Doe</span>
+                    </button>
+
+                    <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                        <a href="/dashboard/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                        <a href="/dashboard/settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                        <hr class="my-1">
+                        <a href="/login" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center">
+                            <FaSignOutAlt className="h-4 w-4 mr-2" />
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userMenu = document.getElementById('user-menu');
+
+    userMenuButton?.addEventListener('click', () => {
+        userMenu?.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!userMenuButton?.contains(event.target as Node) && !userMenu?.contains(event.target as Node)) {
+            userMenu?.classList.add('hidden');
+        }
+    });
+</script>

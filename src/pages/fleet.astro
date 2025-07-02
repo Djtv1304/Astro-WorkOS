@@ -1,0 +1,240 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import VehicleCard from '../components/VehicleCard.astro';
+import { FaFilter, FaSearch } from 'react-icons/fa';
+---
+
+<PublicLayout title="Vehicle Fleet - EcoRide" description="Explore our premium collection of electric vehicles. From compact cars to luxury SUVs, find the perfect EV for your needs.">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Our Electric Vehicle Fleet
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover our carefully curated collection of premium electric vehicles.
+                    Each one offers unique features, cutting-edge technology, and zero emissions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="py-8 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                <!-- Search -->
+                <div class="relative flex-1 max-w-md">
+                    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <input
+                            type="text"
+                            placeholder="Search vehicles..."
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    />
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4 items-center">
+                    <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                        <option value="">All Categories</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="sports">Sports</option>
+                        <option value="compact">Compact</option>
+                    </select>
+
+                    <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                        <option value="">Price Range</option>
+                        <option value="0-50">$0 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-150">$100 - $150</option>
+                        <option value="150+">$150+</option>
+                    </select>
+
+                    <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                        <option value="">Range</option>
+                        <option value="200+">200+ miles</option>
+                        <option value="300+">300+ miles</option>
+                        <option value="400+">400+ miles</option>
+                    </select>
+
+                    <button class="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <FaFilter className="h-4 w-4" />
+                        <span>Filter</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Sedan Category -->
+                <VehicleCard
+                        name="Tesla Model 3"
+                        image="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={89}
+                        range={358}
+                        seats={5}
+                        rating={4.8}
+                        features={['Autopilot', 'Premium Audio', 'Supercharging']}
+                        category="Sedan"
+                />
+
+                <VehicleCard
+                        name="Tesla Model S"
+                        image="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={149}
+                        range={405}
+                        seats={5}
+                        rating={4.9}
+                        features={['Ludicrous Mode', 'Premium Interior', 'Full Self-Driving']}
+                        category="Sedan"
+                />
+
+                <VehicleCard
+                        name="BMW i4"
+                        image="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={95}
+                        range={270}
+                        seats={5}
+                        rating={4.7}
+                        features={['Luxury Interior', 'Sport Package', 'Wireless Charging']}
+                        category="Sedan"
+                />
+
+                <!-- SUV Category -->
+                <VehicleCard
+                        name="BMW iX"
+                        image="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={125}
+                        range={324}
+                        seats={5}
+                        rating={4.9}
+                        features={['Luxury Interior', 'Panoramic Roof', 'Wireless Charging']}
+                        category="SUV"
+                />
+
+                <VehicleCard
+                        name="Tesla Model Y"
+                        image="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={105}
+                        range={326}
+                        seats={7}
+                        rating={4.8}
+                        features={['Falcon Wing Doors', 'Autopilot', 'Tow Package']}
+                        category="SUV"
+                />
+
+                <VehicleCard
+                        name="Audi e-tron"
+                        image="https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={115}
+                        range={222}
+                        seats={5}
+                        rating={4.6}
+                        features={['Virtual Cockpit', 'Air Suspension', 'Bang & Olufsen']}
+                        category="SUV"
+                />
+
+                <!-- Sports Category -->
+                <VehicleCard
+                        name="Audi e-tron GT"
+                        image="https://images.pexels.com/photos/3729328/pexels-photo-3729328.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={150}
+                        range={238}
+                        seats={4}
+                        rating={4.7}
+                        features={['Sport Mode', 'Premium Sound', 'Air Suspension']}
+                        category="Sports"
+                />
+
+                <VehicleCard
+                        name="Porsche Taycan"
+                        image="https://images.pexels.com/photos/3764979/pexels-photo-3764979.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={180}
+                        range={227}
+                        seats={4}
+                        rating={4.9}
+                        features={['Launch Control', 'Sport Chrono', 'Carbon Interior']}
+                        category="Sports"
+                />
+
+                <VehicleCard
+                        name="BMW i8"
+                        image="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={199}
+                        range={242}
+                        seats={4}
+                        rating={4.8}
+                        features={['Butterfly Doors', 'Hybrid Engine', 'LED Headlights']}
+                        category="Sports"
+                />
+
+                <!-- Compact Category -->
+                <VehicleCard
+                        name="Mini Cooper SE"
+                        image="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={65}
+                        range={114}
+                        seats={4}
+                        rating={4.5}
+                        features={['Go-Kart Feel', 'Union Jack Taillights', 'Connected Services']}
+                        category="Compact"
+                />
+
+                <VehicleCard
+                        name="Nissan Leaf"
+                        image="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={55}
+                        range={149}
+                        seats={5}
+                        rating={4.3}
+                        features={['ProPILOT Assist', 'e-Pedal', 'NissanConnect']}
+                        category="Compact"
+                />
+
+                <VehicleCard
+                        name="Hyundai Kona Electric"
+                        image="https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        price={72}
+                        range={258}
+                        seats={5}
+                        rating={4.4}
+                        features={['Blue Link', 'Wireless Charging', 'Heads-Up Display']}
+                        category="Compact"
+                />
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center">
+                <button class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                    Load More Vehicles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Can't Find What You're Looking For?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Contact our team to help you find the perfect electric vehicle for your specific needs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                    Contact Us
+                </a>
+                <a href="/signup" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-600 transition-colors font-semibold">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+</PublicLayout>

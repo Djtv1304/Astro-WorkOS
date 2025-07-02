@@ -1,0 +1,275 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+---
+
+<PublicLayout title="Contact Us - EcoRide" description="Get in touch with EcoRide. We're here to help with questions about electric vehicle rentals, pricing, and more.">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Get in Touch
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Have questions about our electric vehicles or services?
+                    We're here to help you make the switch to sustainable transportation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                                    First Name *
+                                </label>
+                                <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                />
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Last Name *
+                                </label>
+                                <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address *
+                            </label>
+                            <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                                Phone Number
+                            </label>
+                            <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+                                Subject *
+                            </label>
+                            <select
+                                    id="subject"
+                                    name="subject"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                            >
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="pricing">Pricing Questions</option>
+                                <option value="fleet">Vehicle Fleet</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                Message *
+                            </label>
+                            <textarea
+                                    id="message"
+                                    name="message"
+                                    rows={6}
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 resize-none"
+                                    placeholder="Tell us how we can help you..."
+                            ></textarea>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input
+                                    type="checkbox"
+                                    id="newsletter"
+                                    name="newsletter"
+                                    class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                            />
+                            <label for="newsletter" class="ml-3 text-sm text-gray-700">
+                                I'd like to receive updates about new vehicles and special offers
+                            </label>
+                        </div>
+
+                        <button
+                                type="submit"
+                                class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="lg:pl-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <FaPhone className="h-6 w-6 text-primary-600" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                                <p class="text-sm text-gray-500">Mon-Fri 8AM-8PM, Weekends 9AM-6PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-secondary-100 p-3 rounded-lg">
+                                <FaEnvelope className="h-6 w-6 text-secondary-600" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                                <p class="text-gray-600">hello@ecoride.com</p>
+                                <p class="text-sm text-gray-500">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-accent-100 p-3 rounded-lg">
+                                <FaMapMarkerAlt className="h-6 w-6 text-accent-600" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                                <p class="text-gray-600">
+                                    123 Green Street<br>
+                                    Eco City, EC 12345<br>
+                                    United States
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <FaClock className="h-6 w-6 text-primary-600" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Business Hours</h3>
+                                <div class="text-gray-600 text-sm space-y-1">
+                                    <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+                                    <p>Saturday: 9:00 AM - 6:00 PM</p>
+                                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-red-900 mb-2">24/7 Emergency Support</h3>
+                        <p class="text-red-700 mb-3">
+                            For roadside assistance or urgent technical issues:
+                        </p>
+                        <p class="text-xl font-bold text-red-900">+1 (555) 911-HELP</p>
+                        <p class="text-sm text-red-600 mt-2">
+                            Available 24/7 for current renters only
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Common Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Quick answers to frequently asked questions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        How do I start a rental?
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Download our app, verify your license, locate a vehicle, and unlock it with your phone. It's that simple!
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        What if I have an accident?
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Contact our 24/7 emergency line immediately. All rentals include comprehensive insurance coverage.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        Can I extend my rental?
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Yes! You can extend your rental through the app, subject to vehicle availability and your account status.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                        Do you offer corporate accounts?
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        Absolutely! We have special Enterprise plans with volume discounts and centralized billing for businesses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Don't wait! Sign up today and start enjoying sustainable transportation with premium electric vehicles.
+            </p>
+            <a href="/signup" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Create Your Account
+            </a>
+        </div>
+    </section>
+</PublicLayout>

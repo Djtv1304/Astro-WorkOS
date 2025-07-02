@@ -1,0 +1,182 @@
+---
+import DashboardLayout from '../../layouts/DashboardLayout.astro';
+import { FaCar, FaClock, FaDollarSign, FaBolt } from 'react-icons/fa';
+
+export const prerender = false;
+---
+
+<DashboardLayout title="Dashboard - EcoRide">
+    <!-- Welcome Section -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Welcome back, John!</h1>
+        <p class="text-gray-600">Here's your rental activity and account overview.</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div class="flex items-center">
+                <div class="bg-primary-100 p-3 rounded-lg">
+                    <FaCar className="h-6 w-6 text-primary-600" />
+                </div>
+                <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-600">Total Rentals</p>
+                    <p class="text-2xl font-bold text-gray-900">24</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div class="flex items-center">
+                <div class="bg-secondary-100 p-3 rounded-lg">
+                    <FaClock className="h-6 w-6 text-secondary-600" />
+                </div>
+                <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-600">Hours Driven</p>
+                    <p class="text-2xl font-bold text-gray-900">156</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div class="flex items-center">
+                <div class="bg-accent-100 p-3 rounded-lg">
+                    <FaDollarSign className="h-6 w-6 text-accent-600" />
+                </div>
+                <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-600">Total Spent</p>
+                    <p class="text-2xl font-bold text-gray-900">$2,340</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div class="flex items-center">
+                <div class="bg-green-100 p-3 rounded-lg">
+                    <FaBolt className="h-6 w-6 text-green-600" />
+                </div>
+                <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-600">CO2 Saved</p>
+                    <p class="text-2xl font-bold text-gray-900">890 lbs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Rentals & Quick Actions -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Current Rental -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Current Rental</h2>
+            <div class="bg-gradient-to-r from-primary-50 to-secondary-50 p-4 rounded-lg">
+                <div class="flex items-center justify-between mb-3">
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Tesla Model 3</h3>
+                        <p class="text-sm text-gray-600">Started: Today, 2:30 PM</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-2xl font-bold text-primary-600">$89</p>
+                        <p class="text-sm text-gray-600">per day</p>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-primary-600 text-white py-2 px-4 rounded-lg hover:bg-primary-700 transition-colors font-medium">
+                        End Rental
+                    </button>
+                    <button class="flex-1 border border-primary-600 text-primary-600 py-2 px-4 rounded-lg hover:bg-primary-50 transition-colors font-medium">
+                        Extend
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
+            <div class="space-y-3">
+                <a href="/dashboard/booking" class="block w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center">
+                    Book New Vehicle
+                </a>
+                <a href="/dashboard/history" class="block w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors font-medium text-center">
+                    View Rental History
+                </a>
+                <a href="/dashboard/profile" class="block w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors font-medium text-center">
+                    Update Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+        <div class="space-y-4">
+            <div class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-green-100 p-2 rounded-lg">
+                        <FaCar className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Completed rental - BMW iX</p>
+                        <p class="text-sm text-gray-600">January 15, 2025 • 4 hours</p>
+                    </div>
+                </div>
+                <span class="text-green-600 font-medium">$120.00</span>
+            </div>
+
+            <div class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-100 p-2 rounded-lg">
+                        <FaDollarSign className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Payment processed</p>
+                        <p class="text-sm text-gray-600">January 12, 2025</p>
+                    </div>
+                </div>
+                <span class="text-gray-600 font-medium">$89.00</span>
+            </div>
+
+            <div class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-green-100 p-2 rounded-lg">
+                        <FaCar className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Completed rental - Tesla Model 3</p>
+                        <p class="text-sm text-gray-600">January 10, 2025 • 6 hours</p>
+                    </div>
+                </div>
+                <span class="text-green-600 font-medium">$89.00</span>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <a href="/dashboard/history" class="text-primary-600 hover:text-primary-700 font-medium">
+                View all activity →
+            </a>
+        </div>
+    </div>
+
+    <!-- Environmental Impact -->
+    <div class="bg-gradient-to-r from-green-50 to-primary-50 p-6 rounded-xl border border-green-200">
+        <h2 class="text-xl font-semibold text-gray-900 mb-4">Your Environmental Impact</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">890 lbs</div>
+                <p class="text-sm text-gray-600">CO2 emissions saved</p>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">156</div>
+                <p class="text-sm text-gray-600">Hours of clean driving</p>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">2,340</div>
+                <p class="text-sm text-gray-600">Miles driven electric</p>
+            </div>
+        </div>
+        <p class="text-center text-gray-600 mt-4">
+            Thank you for choosing sustainable transportation! 🌱
+        </p>
+    </div>
+</DashboardLayout>

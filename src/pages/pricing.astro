@@ -1,0 +1,295 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import { FaCheck, FaBolt, FaCrown, FaRocket } from 'react-icons/fa';
+---
+
+<PublicLayout title="Pricing & Plans - EcoRide" description="Choose the perfect plan for your electric vehicle rental needs. Flexible options from hourly to monthly rates.">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Simple, Transparent Pricing
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the plan that fits your lifestyle. No hidden fees, no surprises.
+                    Just premium electric vehicles at competitive rates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-8">
+                        <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <FaBolt className="h-8 w-8 text-gray-600" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic</h3>
+                        <p class="text-gray-600">Perfect for occasional use</p>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$0.50</div>
+                        <div class="text-gray-600">per minute</div>
+                        <div class="mt-2 text-sm text-gray-500">+ $25 unlock fee</div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Pay-as-you-go pricing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Access to all vehicle types</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">24/7 customer support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Mobile app access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Insurance included</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-white border-2 border-primary-500 rounded-2xl p-8 relative hover:shadow-xl transition-shadow">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              Most Popular
+            </span>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <FaCrown className="h-8 w-8 text-primary-600" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                        <p class="text-gray-600">Best value for regular users</p>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$199</div>
+                        <div class="text-gray-600">per month</div>
+                        <div class="mt-2 text-sm text-gray-500">Includes 100 hours</div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">100 hours included monthly</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">$0.30/min after included hours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Priority vehicle access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Free vehicle reservations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Premium customer support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Charging network access</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                        Choose Premium
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-8">
+                        <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <FaRocket className="h-8 w-8 text-accent-600" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600">For businesses and heavy users</p>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <div class="text-4xl font-bold text-gray-900 mb-2">Custom</div>
+                        <div class="text-gray-600">pricing</div>
+                        <div class="mt-2 text-sm text-gray-500">Volume discounts available</div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Unlimited monthly hours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Fleet management dashboard</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Custom billing solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Priority technical support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <FaCheck className="h-5 w-5 text-primary-500 mr-3" />
+                            <span class="text-gray-700">Multi-location access</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-accent-600 text-white py-3 px-6 rounded-lg hover:bg-accent-700 transition-colors font-semibold">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Rates -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Flexible Rental Options
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the rental duration that works best for your needs, from short trips to extended journeys.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Hourly</h3>
+                    <div class="text-3xl font-bold text-primary-600 mb-2">$15-45</div>
+                    <div class="text-gray-600 text-sm">per hour</div>
+                    <p class="text-gray-500 text-sm mt-4">Perfect for quick errands and short trips around the city.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Daily</h3>
+                    <div class="text-3xl font-bold text-primary-600 mb-2">$89-199</div>
+                    <div class="text-gray-600 text-sm">per day</div>
+                    <p class="text-gray-500 text-sm mt-4">Ideal for day trips, business meetings, or weekend adventures.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Weekly</h3>
+                    <div class="text-3xl font-bold text-primary-600 mb-2">$499-999</div>
+                    <div class="text-gray-600 text-sm">per week</div>
+                    <p class="text-gray-500 text-sm mt-4">Great for vacations or extended business travel.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Monthly</h3>
+                    <div class="text-3xl font-bold text-primary-600 mb-2">$1,999+</div>
+                    <div class="text-gray-600 text-sm">per month</div>
+                    <p class="text-gray-500 text-sm mt-4">Long-term rentals with significant savings and flexibility.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">
+                    All rates include insurance, charging, and 24/7 roadside assistance.
+                </p>
+                <a href="/fleet" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                    View Available Vehicles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Get answers to common questions about our pricing and services.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Are there any hidden fees?</h3>
+                    <p class="text-gray-600">
+                        No hidden fees! Our pricing is transparent and includes insurance, charging, and basic maintenance.
+                        Additional charges only apply for damages or violations.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What happens if the battery runs low?</h3>
+                    <p class="text-gray-600">
+                        All our vehicles come with access to our charging network. If you need assistance,
+                        our 24/7 support team can help you find the nearest charging station or arrange roadside assistance.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I cancel or modify my reservation?</h3>
+                    <p class="text-gray-600">
+                        Yes! Premium and Enterprise members can cancel or modify reservations up to 30 minutes before pickup.
+                        Basic plan users can cancel up to 2 hours in advance.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Do you offer corporate discounts?</h3>
+                    <p class="text-gray-600">
+                        Absolutely! Our Enterprise plan offers custom pricing and volume discounts for businesses.
+                        Contact our sales team to discuss your specific needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready to Start Driving Electric?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Choose your plan and join thousands of satisfied customers making the switch to sustainable transportation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/signup" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                    Sign Up Now
+                </a>
+                <a href="/contact" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-600 transition-colors font-semibold">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </section>
+</PublicLayout>

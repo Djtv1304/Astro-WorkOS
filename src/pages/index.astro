@@ -1,16 +1,191 @@
 ---
-
+import PublicLayout from '../layouts/PublicLayout.astro';
+import VehicleCard from '../components/VehicleCard.astro';
+import { FaBolt, FaLeaf, FaDollarSign, FaClock, FaShieldAlt, FaHeadset } from 'react-icons/fa';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PublicLayout title="EcoRide - Premium Electric Vehicle Rentals">
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-20 lg:py-32">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div class="animate-fade-in">
+					<h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+						Drive Electric,
+						<span class="text-primary-600">Drive Future</span>
+					</h1>
+					<p class="text-xl text-gray-600 mb-8 leading-relaxed">
+						Experience premium electric vehicles with zero emissions.
+						Sustainable transportation that doesn't compromise on luxury or performance.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<a href="/fleet" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold text-center">
+							Explore Fleet
+						</a>
+						<a href="/signup" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg hover:bg-primary-600 hover:text-white transition-colors font-semibold text-center">
+							Get Started
+						</a>
+					</div>
+				</div>
+				<div class="animate-slide-up">
+					<img
+						src="https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800"
+						alt="Electric Vehicle"
+						class="w-full h-auto rounded-2xl shadow-2xl"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefits Section -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+					Why Choose EcoRide?
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					We're revolutionizing transportation with sustainable solutions that benefit you and the planet.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors">
+						<FaLeaf className="h-8 w-8 text-primary-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Zero Emissions</h3>
+					<p class="text-gray-600">
+						100% electric vehicles that produce zero emissions, helping reduce your carbon footprint.
+					</p>
+				</div>
+
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-colors">
+						<FaDollarSign className="h-8 w-8 text-secondary-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Cost Effective</h3>
+					<p class="text-gray-600">
+						Save money on fuel costs with our efficient electric vehicles and competitive pricing.
+					</p>
+				</div>
+
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-colors">
+						<FaClock className="h-8 w-8 text-accent-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Availability</h3>
+					<p class="text-gray-600">
+						Book and access vehicles anytime with our convenient mobile app and keyless entry.
+					</p>
+				</div>
+
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors">
+						<FaShieldAlt className="h-8 w-8 text-primary-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Fully Insured</h3>
+					<p class="text-gray-600">
+						Complete insurance coverage included with every rental for your peace of mind.
+					</p>
+				</div>
+
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-colors">
+						<FaBolt className="h-8 w-8 text-secondary-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Fast Charging</h3>
+					<p class="text-gray-600">
+						Access to our extensive network of fast-charging stations across the city.
+					</p>
+				</div>
+
+				<div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow group">
+					<div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-colors">
+						<FaHeadset className="h-8 w-8 text-accent-600" />
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+					<p class="text-gray-600">
+						Round-the-clock customer support to assist you whenever you need help.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Vehicles -->
+	<section class="py-20 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+					Featured Electric Vehicles
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Choose from our premium collection of electric vehicles, each offering unique features and experiences.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<VehicleCard
+					name="Tesla Model 3"
+					image="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800"
+					price={89}
+					range={358}
+					seats={5}
+					rating={4.8}
+					features={['Autopilot', 'Premium Audio', 'Supercharging']}
+					category="Sedan"
+				/>
+
+				<VehicleCard
+					name="BMW iX"
+					image="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=800"
+					price={125}
+					range={324}
+					seats={5}
+					rating={4.9}
+					features={['Luxury Interior', 'Panoramic Roof', 'Wireless Charging']}
+					category="SUV"
+				/>
+
+				<VehicleCard
+					name="Audi e-tron GT"
+					image="https://images.pexels.com/photos/3729328/pexels-photo-3729328.jpeg?auto=compress&cs=tinysrgb&w=800"
+					price={150}
+					range={238}
+					seats={4}
+					rating={4.7}
+					features={['Sport Mode', 'Premium Sound', 'Air Suspension']}
+					category="Sports"
+				/>
+			</div>
+
+			<div class="text-center mt-12">
+				<a href="/fleet" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+					View All Vehicles
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-primary-600">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+				Ready to Drive Electric?
+			</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+				Join thousands of satisfied customers who have made the switch to sustainable transportation.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/signup" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+					Start Renting Today
+				</a>
+				<a href="/contact" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-600 transition-colors font-semibold">
+					Contact Sales
+				</a>
+			</div>
+		</div>
+	</section>
+</PublicLayout>
