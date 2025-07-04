@@ -1,5 +1,8 @@
 ---
 import { FaBolt, FaBell, FaUser, FaSignOutAlt } from 'react-icons/fa';
+import { isAuthenticated, getUser } from '../../lib/workos';
+const authenticated = await isAuthenticated(Astro.cookies);
+const user = await getUser(Astro.cookies);
 ---
 
 <header class="bg-white shadow-sm border-b border-gray-200">
@@ -23,14 +26,14 @@ import { FaBolt, FaBell, FaUser, FaSignOutAlt } from 'react-icons/fa';
                 <div class="relative">
                     <button id="user-menu-button" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors">
                         <FaUser className="h-6 w-6" />
-                        <span class="hidden sm:block">John Doe</span>
+                        <span class="hidden sm:block">{user && user.firstName + ' ' + user.lastName}</span>
                     </button>
 
                     <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
                         <a href="/dashboard/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
                         <a href="/dashboard/settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
                         <hr class="my-1">
-                        <a href="/login" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center">
+                        <a href="/logout" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center">
                             <FaSignOutAlt className="h-4 w-4 mr-2" />
                             Sign Out
                         </a>
@@ -40,19 +43,3 @@ import { FaBolt, FaBell, FaUser, FaSignOutAlt } from 'react-icons/fa';
         </div>
     </div>
 </header>
-
-<script>
-    const userMenuButton = document.getElementById('user-menu-button');
-    const userMenu = document.getElementById('user-menu');
-
-    userMenuButton?.addEventListener('click', () => {
-        userMenu?.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!userMenuButton?.contains(event.target as Node) && !userMenu?.contains(event.target as Node)) {
-            userMenu?.classList.add('hidden');
-        }
-    });
-</script>

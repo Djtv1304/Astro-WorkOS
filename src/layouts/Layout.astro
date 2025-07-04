@@ -24,6 +24,21 @@ const { title = 'EcoRide - Electric Vehicle Rentals', description = 'Sustainable
 </head>
 <body class="font-sans bg-gray-50 text-gray-900 antialiased">
 <slot />
+<script>
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userMenu = document.getElementById('user-menu');
+
+    userMenuButton?.addEventListener('click', () => {
+        userMenu?.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!userMenuButton?.contains(event.target as Node) && !userMenu?.contains(event.target as Node)) {
+            userMenu?.classList.add('hidden');
+        }
+    });
+</script>
 </body>
 </html>
 
