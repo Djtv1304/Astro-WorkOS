@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/netlify": "^6.4.0",
     "@astrojs/react": "^4.3.0",
+    "@azure/identity": "^4.10.2",
+    "@azure/keyvault-keys": "^4.10.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
